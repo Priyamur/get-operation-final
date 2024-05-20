@@ -46,5 +46,14 @@ namespace LXP.Api.Controllers
             return Ok(CreateFailureResponse("AlreadyEnrolled", 400));
         }
 
+        
+        [HttpGet("/lxp/enroll/{learnerId}/course/topic")]
+
+       public IActionResult GetCourseandTopicsByLearnerId(Guid learnerId)
+        {
+            var learner = _enrollmentService.GetCourseandTopicsByLearnerId(learnerId);
+            return Ok(CreateSuccessResponse(learner));
+        }
+
     }
 }
