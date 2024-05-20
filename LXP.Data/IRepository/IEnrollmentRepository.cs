@@ -12,5 +12,7 @@ namespace LXP.Data.IRepository
          Task  Addenroll(Enrollment enrollment);
 
         bool AnyEnrollmentByLearnerAndCourse(Guid learnerId, Guid courseId);
+
+         object GetCourseandTopicsByLearnerId(Guid learnerId);
     }
 }
